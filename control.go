@@ -6,7 +6,7 @@ import (
 
 type Person struct {
 	name string
-	age int
+	age  int
 }
 
 func NewPerson(n string, a int) *Person {
@@ -16,7 +16,7 @@ func NewPerson(n string, a int) *Person {
 	return p
 }
 
-func CheckAge(p* Person, threshold int) string {
+func CheckAge(p *Person, threshold int) string {
 	if p.age > threshold {
 		return "Old"
 	} else {
@@ -36,11 +36,6 @@ func RunControl2(name string, age int, numOfPeople int) string {
 	}
 
 	sum := 0
-/*
-	for person := range people {
-		sum += person.age
-	}
-*/
 	for i := 0; i < numOfPeople; i++ {
 		sum += people[i].age
 	}
